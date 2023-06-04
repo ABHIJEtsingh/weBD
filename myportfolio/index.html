@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: lightskyblue;
+            color: white;
+            font-family: 'popins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            border-bottom: inset;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .eyes {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .first {
+
+            min-height: 510px;
+            max-width: 510px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            border-radius: 100vmax;
+            padding: 1rem 2rem;
+            position: relative;
+        }
+
+        .first::before {
+            content: "";
+            background-image:
+                conic-gradient(#fff 0deg, transparent 320deg);
+            /* bigger button */
+            height: 17rem;
+            width: 275px;
+
+            /*centring the gradient*/
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform:
+                translate(-50%, -50%) rotate(0deg);
+
+            border-radius: inherit;
+            transition:
+                transform 1s cubic-bezier(0.3, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .first:hover::before {
+            transform:
+                translate(-50%, -50%) rotate(-360deg);
+        }
+
+        .first {
+            overflow: hidden;
+
+        }
+
+        .first img {
+            max-width: 16rem;
+            border-radius: 50%;
+            padding: 6.5rem;
+            
+        }
+
+        .secnd {
+
+            height: 510px;
+            width: 510px;
+            margin: 160px 31px;
+
+        }
+
+        .secnd h1 {
+            font-size: 2.5rem;
+
+        }
+
+        .cnct {
+            background-color: black;
+            height: 50px;
+            width: 100px;
+            margin: 0 192px;
+        }
+
+        .in-cnct {
+                background-color: black;
+                margin: 2rem;
+                padding: 1rem 0rem;
+        }
+
+        .l3 p {
+            font-weight: 600;
+            margin: 25px 2px;
+            font-style: oblique;
+        }
+        .intro{
+            word-spacing: 1px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @media (max-width: 1231px){
+            .nav{
+                width: 200px;
+            }
+            .first{
+                display: flex;
+                width: 205px;
+                height: 205px;
+            }
+            .first::before{
+                display: flex;
+                width: 210px;
+                height: 8rem;
+            }
+            .first img{
+                display: flex;
+                width: 8rem;
+            }
+            .secnd{
+                display: flex;
+                width: 205px;
+                height: 205px;
+            }
+        }
+            @media (orientation:portrait){
+            .first{
+                width: 205px;
+                height: 205px;
+            }
+            .first::before{
+                width: 165px;
+                height: 10rem;
+            }
+            .first img{
+                width: 9rem;
+                margin: -28px -72px;
+            }
+            .secnd{
+                width: 205px;
+                height: 205px;
+            }
+        }
+    </style>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">JEET</div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="eyes">
+            <div class="first">
+                <img src="dp.jpeg">
+            </div>
+            <div class="secnd">
+                <div class="l1">
+                    <h1>Hi I'm Abhijeet Singh</h1>
+                </div>
+                <div class="l2">
+                    <h2>to assist you with my</h2>
+                </div>
+                <div class="l3">
+                    <h2> Development skills</h2>
+                    <p class="intro">A B.tech student in computer science and engineering.
+                        I'm a front-end Developer and my core is Javascript.
+                        Also love to solve technology issues.
+                    </p>
+                    <div class="cnct">
+                        <div class="in-cnct">Connect</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
